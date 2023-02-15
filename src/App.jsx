@@ -2,6 +2,7 @@
 import './App.scss';
 import Button from './components/Button/Button';
 import Form from './components/Form/Form';
+import ToDoList from './components/ToDoList/ToDoList';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       </div>
 
       <div className='todo__form'>
-        <Form/>
+        <ToDoList/>
       </div>
     </div>
   );

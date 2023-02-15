@@ -6,7 +6,7 @@ const Form = (props) => {
 
   const [input, setInput] =useState("")
 
-  const {text} = props
+  //const {text} = props
 
   const handleChange = (event) => {
     setInput(event.target.value)
@@ -14,6 +14,11 @@ const Form = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    props.onSubmit({
+      id:Math.floor(Math.random()*100),
+      text:input
+    })
 
     setInput('')
   }
