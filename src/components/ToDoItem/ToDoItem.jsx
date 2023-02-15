@@ -1,22 +1,16 @@
 import React from 'react'
-import { useState } from 'react'
-import Form from '../Form/Form'
 import './ToDoItem.scss'
 
-const ToDoItem = ({todos, completedTodo}) => {
-  const [edit, setEdit] =useState({
-    id: null,
-    value:''
-  })
+const ToDoItem = ({todos, removeTodo}) => {
+
 
   return todos.map((todo, index) => (
     <div className='todo__item' key={index}>
-      <div 
-        key={todo.id} 
-        onClick={()=>completedTodo(todo.id)}>
+      <div key={todo.id}>
         {todo.text}
       </div>
-      <button className='todo__item--button'>x</button>
+      <button className='todo__item--delete'
+      onClick = {()=>removeTodo(todo.id)}>x</button>
     </div>
   ))
 }

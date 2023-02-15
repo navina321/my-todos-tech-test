@@ -13,20 +13,16 @@ const ToDoList = () => {
     console.log(...todos);
   };
 
-  const completeTodo = (id) => {
-    let updatedTodos = todos.map(todo => {
-      if (todo.id === id) {
-        todo.isComplete = !todo.isComplete
-      }
-      return todo
-    })
-    setTodos(updatedTodos)
+  const removeTodo = (id) => {
+    const removeArr = [...todos].filter(todo => todo.id !== id)
+
+    setTodos(removeArr)
   }
 
   return (
     <div>
       <Form onSubmit={addTodo} />
-      <ToDoItem todos={todos} completeTodo={completeTodo} />
+      <ToDoItem todos={todos} removeTodo={removeTodo}/>
     </div>
   );
 };
