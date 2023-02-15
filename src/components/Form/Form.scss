@@ -1,0 +1,19 @@
+.form {
+    border: 2px solid black;
+    border-radius: 8px;
+    width: 90%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    
+
+    &__input {
+        width: 90%;
+        border: none;
+    }
+    &__button {
+        border: none;
+        background-color: white;
+    }
+}
