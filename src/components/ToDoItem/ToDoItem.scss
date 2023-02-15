@@ -1,0 +1,15 @@
+.todo__item {
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 10px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    
+    &--button {
+        background-color: white;
+        border: none;
+    }
+
+}
